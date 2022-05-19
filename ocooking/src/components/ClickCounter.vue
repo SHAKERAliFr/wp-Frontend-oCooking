@@ -19,7 +19,8 @@ export default {
       };
   },
   methods: {
-     handelclick: function () {
+     handelclick: function (evt) {
+         evt.preventDefault();
          this.clickCounte++;
          if(this.clickCounte % 2 == 0){
              this.parity='even';
@@ -35,17 +36,18 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 button{
     margin-left: 1rem;
-    background-color: coral;
-    transition:all Is ease-in-out;
+    background-color: aquamarine;
+    transition: all ls ease-in-out;
+   
     &.odd{
         background-color:aqua;
-        transform: rotate(355deg); 
+        transform: rotate(360deg); 
     }
     &.even{
-        background-color:aquamarine;
+        background-color:coral;
        
        }
 }

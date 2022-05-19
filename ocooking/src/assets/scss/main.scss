@@ -1,0 +1,25 @@
+$gutter: 1rem;
+$color-light-green: #EEF3ED;
+$shadow: 0 3px 3px #0005;
+
+
+.card {
+    padding: 0;
+    border: solid 1px black;
+    position: relative;
+    overflow: hidden;
+    background-color: $color-light-green;
+    margin: $gutter;
+    box-shadow: $shadow;
+
+    img {
+        width: 100%;
+        display: block;
+    }
+
+
+    & .card__content {
+        padding: $gutter $gutter*2;
+    }
+
+}
