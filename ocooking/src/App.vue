@@ -1,26 +1,24 @@
 <template>
   <div id="app">
-       <Header/>
+    <Header />
 
-       <RecipeList/>
+    <router-view />
 
-       <Footer/>
+    <Footer />
   </div>
 </template>
 
 <script>
-import Header from './components/Header.vue';
-import Footer from './components/Footer.vue';
-import RecipeList from './components/RecipeList.vue';
+import Header from "./components/Header.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     Header,
     Footer,
-    RecipeList
-  }
-}
+  },
+};
 </script>
 
 <style lang="scss">

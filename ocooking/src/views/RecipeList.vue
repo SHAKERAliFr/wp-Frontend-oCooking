@@ -19,10 +19,10 @@
 </template>
 
 <script>
-import RecipeCard from "./RecipeCard.vue";
-import RecipeTypeList from "./RecipeTypeList.vue";
-import RecipeDifficultyList from "./RecipeDifficultyList.vue";
-import IngredientList from "./IngredientList.vue";
+import RecipeCard from "../components/RecipeCard.vue";
+import RecipeTypeList from "../components/RecipeTypeList.vue";
+import RecipeDifficultyList from "../components/RecipeDifficultyList.vue";
+import IngredientList from "../components/IngredientList.vue";
 import recipeService from "../services/recipeService.js";
 
 export default {
