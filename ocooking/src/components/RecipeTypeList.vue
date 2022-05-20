@@ -1,6 +1,8 @@
 <template>
 <!--V-MODEL : Pour lier la valeur d'un élement html de formulaire avec un "data" du composant-->
-<select v-if="recipeTypes.length">
+<select v-if="recipeTypes.length"
+    @change="handleChange"
+    v-model="selectedOption">
     
     <option 
         v-for="type in recipeTypes"
@@ -22,13 +24,22 @@ export default {
   data(){
       return{
           recipeTypes: [],
-          // selectedOption: null
+          selectedOption: null
       };
   },
   async created(){
       this.recipeTypes = await recipeService.loadRecipesTypes();
   },
-  
+  methods: {
+      handleChange(evt){
+          evt.preventDefault();
+          // DOC VUESJS Event, envoyer un event : https://vuejs.org/v2/guide/components-custom-events.html
+          this.$emit(
+              'recipe-type-selected',// nom de l'événement
+              this.selectedOption// informations qui seront contenues dans l'event
+          );
+      }
+  }
 }
 </script>
 

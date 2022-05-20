@@ -1,6 +1,8 @@
 <template>
 <!--V-MODEL : Pour lier la valeur d'un élement html de formulaire avec un "data" du composant-->
-<select 
+<select v-if="recipeDifficulty.length"
+         @change="handelChange"
+         v-model="selectedOption"
   >
     
     <option 
@@ -17,18 +19,27 @@
 <script>
 import recipeService from '../services/recipeService';
 export default {
-  name: 'RecipeTypeList',
+  name: 'RecipeDifficultyList',
   components: {
   },
   data(){
       return{
            recipeDifficulty: [],
-          // selectedOption: null
+           selectedOption: null,
       };
   },
   async created(){
       this.recipeDifficulty= await recipeService.loadRecipesDifficulty();
   },
+  methods: {
+      handelChange(evt){
+    evt.preventDefault();
+     this.$emit(
+              'recipe-difficulty-selected',// nom de l'événement
+              this.selectedOption// informations qui seront contenues dans l'event
+          );
+      }
+  }
   
 }
 </script>
