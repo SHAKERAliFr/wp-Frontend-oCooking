@@ -1,7 +1,13 @@
 <template>
   <section>
        <h1>Recettes</h1>
+        <div>
+            <RecipeTypeList />
+            <IngredientList />
+            <RecipeDifficultyList />
+        </div>
        <ul>
+           
            <li 
            v-for='recipe in recipes'
            :key="recipe.id" 
@@ -14,12 +20,18 @@
 
 <script>
 import RecipeCard from './RecipeCard.vue';
+import RecipeTypeList from './RecipeTypeList.vue';
+import RecipeDifficultyList from './RecipeDifficultyList.vue';
+import IngredientList from './IngredientList.vue';
 import recipeService from '../services/recipeService.js';
 
 export default {
   name: 'RecipeList',
   components: {
     RecipeCard,
+    RecipeTypeList,
+    IngredientList,
+    RecipeDifficultyList
   },
   data() {
     return{
