@@ -3,6 +3,7 @@
     <img :src="getImageURL" alt="" />
     <h2>{{ recipeProps.title.rendered }}</h2>
     <div class="card__content" v-html="recipeProps.excerpt.rendered"></div>
+
     <router-link
       class="Router-link"
       :to="{

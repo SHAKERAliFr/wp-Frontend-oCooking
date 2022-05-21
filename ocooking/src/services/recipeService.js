@@ -61,6 +61,15 @@ const recipeService = {
         return response.data;
 
     },
+    async getRecipesById(recipeId) {
+
+        // On a decouvert que l'API WP nous permet de filtrer nos résultat
+        // Exemple, pour récupérer toutes les recettes qui ont le difficulty de recette d'id 14 (plat principal) j'irais sur le endpoint suivant /recipe?_embed=true&recipe-type=14
+        const response = await axios.get(recipeService.baseURI + '/recipe/' + recipeId + '?_embed=true');
+
+        return response.data;
+
+    },
 };
 
 export default recipeService;
