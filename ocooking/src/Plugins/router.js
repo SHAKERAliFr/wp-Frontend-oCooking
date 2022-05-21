@@ -1,23 +1,22 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import RecipeList from '../views/RecipeList.vue'
+import RecipeSingle from '../views/RecipeSingle.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
+    component: RecipeList,
     name: 'home',
-    component: RecipeList
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
+    path: '/recipe/:id',
+    component: RecipeSingle,
+    name: 'recipe',
+  },
+
 ]
 
 const router = new VueRouter({
