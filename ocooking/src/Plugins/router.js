@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import RecipeList from '../views/RecipeList.vue'
 import RecipeSingle from '../views/RecipeSingle.vue'
 import LoginForm from '../views/LoginForm.vue'
+import UserHome from '../views/UserHome.vue'
 
 Vue.use(VueRouter)
 
@@ -21,6 +22,11 @@ const routes = [
     path: '/login',
     component: LoginForm,
     name: 'login',
+  },
+  {
+    path: '/user-home',
+    component: UserHome,
+    name: 'uesr-home',
   },
 
 ]
