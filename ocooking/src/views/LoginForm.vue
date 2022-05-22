@@ -26,6 +26,7 @@
 
 <script>
 import userService from "../services/userService.js";
+import storage from "../Plugins/storage.js";
 
 export default {
   name: "LoginForm",
@@ -58,6 +59,7 @@ export default {
 
         if (userData) {
           console.log("LOGIN SUCCESSFULL !! YATAAAA");
+          storage.set("userData", userData);
         } else {
           console.log("LOGIN FAILED !!");
           this.loginFailed = true;
