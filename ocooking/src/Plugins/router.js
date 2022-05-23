@@ -5,6 +5,7 @@ import RecipeSingle from '../views/RecipeSingle.vue'
 import LoginForm from '../views/LoginForm.vue'
 import LogOut from '../views/LogOut.vue'
 import UserHome from '../views/UserHome.vue'
+import InscriptionPage from '../views/InscriptionPage.vue'
 
 Vue.use(VueRouter)
 
@@ -33,6 +34,11 @@ const routes = [
     path: '/user-home',
     component: UserHome,
     name: 'uesr-home',
+  },
+  {
+    path: '/inscription',
+    component: InscriptionPage,
+    name: 'inscription',
   },
 
 ]

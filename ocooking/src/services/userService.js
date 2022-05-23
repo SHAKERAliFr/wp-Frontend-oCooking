@@ -48,7 +48,23 @@ const userService = {
             }
         }
         return false;
+    },
+    inscription: async function (username, email, password) {
+        const response = await axios.post(
+            'http://localhost/spewp/oCooking/wp-backend-oCooking/public/wp-json/ocooking/v1/inscription',
+            {
+                username: username,
+                email: email,
+                password: password
+            }
+        ).catch(
+            function () {
+                return false;
+            }
+        );
+        return response.data;
     }
+
 
 
 
