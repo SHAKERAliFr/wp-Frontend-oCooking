@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import RecipeList from '../views/RecipeList.vue'
 import RecipeSingle from '../views/RecipeSingle.vue'
 import LoginForm from '../views/LoginForm.vue'
+import LogOut from '../views/LogOut.vue'
 import UserHome from '../views/UserHome.vue'
 
 Vue.use(VueRouter)
@@ -22,6 +23,11 @@ const routes = [
     path: '/login',
     component: LoginForm,
     name: 'login',
+  },
+  {
+    path: '/logout',
+    component: LogOut,
+    name: 'logout',
   },
   {
     path: '/user-home',
