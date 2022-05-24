@@ -6,6 +6,7 @@ import LoginForm from '../views/LoginForm.vue'
 import LogOut from '../views/LogOut.vue'
 import UserHome from '../views/UserHome.vue'
 import InscriptionPage from '../views/InscriptionPage.vue'
+import RecipeCreate from '../views/RecipeCreate.vue'
 
 Vue.use(VueRouter)
 
@@ -39,6 +40,11 @@ const routes = [
     path: '/inscription',
     component: InscriptionPage,
     name: 'inscription',
+  },
+  {
+    path: '/recipeCreate',
+    component: RecipeCreate,
+    name: 'recipeCreate',
   },
 
 ]

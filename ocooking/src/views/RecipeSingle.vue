@@ -4,7 +4,7 @@
      -->
   <article class="card" v-if="recipe">
     <img :src="getImageURL" alt="" />
-    <h2>{{ recipe.type }}</h2>
+    <h2>{{ recipe.name }}</h2>
     <div class="card__content" v-html="recipe.content.rendered"></div>
 
     <router-link

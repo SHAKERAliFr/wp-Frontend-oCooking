@@ -70,6 +70,23 @@ const recipeService = {
         return response.data;
 
     },
+    // async saveRecipe(title, type, description, ingredients, difficulty) {
+    //     // préparer les options avec header et authorization pour porter le token
+    //     // Puis envoyer les données (title,type,description,ingredients) a l'API tout en donnant également le token.
+
+    //     axios.post(
+    //         endpoint,
+    //         {
+    //             title: title,
+    //             type: type,
+    //             description: description,
+    //             ingredients: ingredients,
+    //             difficulty: difficulty
+
+    //         },
+    //         options
+    //     )
+    // }
 };
 
 export default recipeService;
